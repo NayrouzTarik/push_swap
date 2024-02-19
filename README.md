@@ -25,7 +25,11 @@ ra: Rotate Stack A upward (push the first element to the bottom).
 rb: Rotate Stack B upward.
 
 rr: Rotate both stacks upward.
+
 rra: Rotate Stack A downward (bring the bottom element to the top).
+
 rrb: Rotate Stack B downward.
+
 rrr: Rotate both stacks downward.
+
 By carefully applying these operations, we can eventually sort Stack A!
