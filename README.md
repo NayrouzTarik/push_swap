@@ -11,12 +11,19 @@ A stack is a data structure type that follows the logic of Last In, First Out (L
 Okay, so the main idea here is to manipulate the stacks using a predefined set of operations until Stack A is sorted. We're only allowed to use a limited set of operations:
 
 sa: Swap the first two numbers at the top of Stack A.
+
 sb: Swap the first two numbers at the top of Stack B.
+
 ss: Swap the first two numbers at the top of both stacks.
+
 pa: Push the top number from Stack B onto Stack A.
+
 pb: Push the top number from Stack A onto Stack B.
+
 ra: Rotate Stack A upward (push the first element to the bottom).
+
 rb: Rotate Stack B upward.
+
 rr: Rotate both stacks upward.
 rra: Rotate Stack A downward (bring the bottom element to the top).
 rrb: Rotate Stack B downward.
