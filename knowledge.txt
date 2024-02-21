@@ -15,7 +15,7 @@ operations :
 
     -push : pa : pushing the top node of B in A
             pb : pushing the top node of A in B
-            pr :
+
 
     -reverse rotate : rra : bring the bottom node from A to the top of A
                       rrb : bring the bottom node from B to the top of B

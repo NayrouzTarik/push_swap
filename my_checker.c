@@ -13,26 +13,71 @@
 #include "push_swap.h"
 #include "push_swap.h"
 
-int check_dup(t_list *list) 
+// int check_dup(t_list *list) 
+// {
+//     t_list *current = list;
+//     t_list *compare;
+
+//     while (current != NULL) 
+//     {
+//         compare = current->next;
+//         while (compare != NULL) 
+//         {
+//             // printf("Comp %d and %d\n", current->value, compare->value);
+//             if (current->value == compare->value) 
+//             {
+//                 // printf("Dup found: %d\n", current->value);
+//                 return 1; // Found a dup
+//             }
+//             compare = compare->next;
+//         }
+//         current = current->next;
+//     }
+//     // printf("No dups.\n");
+//     return 0;
+// }
+
+int ft_atoi(const char *str)
+{
+    int i;
+    int signe;
+    int res;
+
+    i = 0;
+    signe = 1;
+    res = 0;
+    while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+    {
+        i++;
+    }
+    if (str[i] == '-')
+    {
+        signe = -1;
+        i++;
+    }
+    else if (str[i] == '+')
+        i++;
+    while (str[i] != '\0')
+    {
+        if (str[i] >= '0' && str[i] <= '9')
+        {
+            res = (res * 10) + str[i] - '0';
+        }
+        else
+            break;
+        i++;
+    }
+    return (res * signe);
+}
+
+int exists_in_list(t_list *list, int value)
 {
     t_list *current = list;
-    t_list *compare;
-
-    while (current != NULL) 
+    while (current != NULL)
     {
-        compare = current->next;
-        while (compare != NULL) 
-        {
-            // printf("Comp %d and %d\n", current->value, compare->value);
-            if (current->value == compare->value) 
-            {
-                // printf("Dup found: %d\n", current->value);
-                return 1; // Found a dup
-            }
-            compare = compare->next;
-        }
+        if (current->value == value) 
+            return (1); 
         current = current->next;
     }
-    // printf("No dups.\n");
-    return 0;
+    return (0); 
 }

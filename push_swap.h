@@ -35,7 +35,22 @@ void ft_lstadd_first(t_list **list, int value);
 void ft_lstadd_last(t_list **lst, int value);
 void deleteNode(t_list **list, t_list *del);
 int ft_lstsize(t_list *list);
-int check_dup(t_list *list);
+int exists_in_list(t_list *list, int value);
 void print_list(t_list *list);
-
+int ft_atoi(const char *str);
+//swap functions
+void ft_sa(t_list **stack_a, int should_print);
+void ft_sb(t_list **stack_b, int should_print);
+void ft_ss(t_list **stack_a, t_list **stack_b);
+//push functions
+void ft_pa(t_list **stack_a, t_list **stack_b);
+void ft_pb(t_list **stack_a, t_list **stack_b);
+//reverse rotating functions
+void ft_rra(t_list **stack_a, int print);
+void ft_rrb(t_list **stack_b, int print);
+void ft_rrr(t_list **stack_a, t_list **stack_b);
+//rotating functions
+void ft_ra(t_list **stack_a, int print);
+void ft_rb(t_list **stack_b, int print);
+void ft_rr(t_list **stack_a, t_list **stack_b);
 #endif
