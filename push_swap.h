@@ -53,4 +53,6 @@ void ft_rrr(t_list **stack_a, t_list **stack_b);
 void ft_ra(t_list **stack_a, int print);
 void ft_rb(t_list **stack_b, int print);
 void ft_rr(t_list **stack_a, t_list **stack_b);
+
+void sorting_tree(t_list ***stack_a , t_list ***stack_b);
 #endif

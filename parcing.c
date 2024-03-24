@@ -11,11 +11,10 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "./libft/libft.h"
 
 void exit_error(void) 
 {
-    ft_putstr_fd("Error sss\n", 1);
+    write(1,"Error sss\n", 1);
     exit(EXIT_FAILURE);
 }
 
@@ -69,7 +68,7 @@ t_list *parsing(int ac, char **av)
         }
         if (exists_in_list(list, value))
         {
-            ft_putstr_fd("Duplicates \n", STDERR_FILENO);
+            write(1,"Duplicates \n", STDERR_FILENO);
             exit(EXIT_FAILURE);
         }
         t_list *new_node = ft_lstadd(value); 
@@ -96,7 +95,7 @@ void print_list(t_list *list)
 }
 
 #include "push_swap.h"
-#include "./libft/libft.h"
+
 
 int main(int argc, char **argv) 
 {
@@ -106,16 +105,23 @@ int main(int argc, char **argv)
         t_list *stack_b = NULL;
 
         //manually till i work on pa 
-            stack_b = ft_lstadd(1); 
-            t_list *node_b = ft_lstadd(2);
-            stack_b->next = node_b;
-            t_list *node_bi = ft_lstadd(4);
-            node_b->next = node_bi;
+            // stack_b = ft_lstadd(1); 
+            // t_list *node_b = ft_lstadd(2);
+            // stack_b->next = node_b;
+            // t_list *node_bi = ft_lstadd(4);
+            // node_b->next = node_bi;
     
         printf("== Before ==\n");
         print_list( stack_a); 
         print_list( stack_b); 
         // ft_ss(&stack_a, &stack_b); 
+
+        t_list **stack_a_ptr = &stack_a;
+        t_list **stack_b_ptr = &stack_b;
+
+        sorting_tree(&stack_a_ptr, &stack_b_ptr);
+        print_list( stack_a);
+        
 
         // printf("\n== After SS ==\n");
         // print_list( stack_a);
