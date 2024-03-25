@@ -26,6 +26,7 @@ typedef struct s_list
 {
     int value;
     int index_in_stack;
+    int index_in_order;
     struct s_list *next;
     struct s_list *prev;
 }               t_list;
@@ -53,6 +54,9 @@ void ft_rrr(t_list **stack_a, t_list **stack_b);
 void ft_ra(t_list **stack_a, int print);
 void ft_rb(t_list **stack_b, int print);
 void ft_rr(t_list **stack_a, t_list **stack_b);
-
+//sorting fcts
+void sorth_two(t_list ***stack_a , t_list ***stack_b);
 void sorting_tree(t_list ***stack_a , t_list ***stack_b);
+void sorth_four(t_list ***stack_a , t_list ***stack_b);
+
 #endif
