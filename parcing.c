@@ -119,14 +119,17 @@ int main(int argc, char **argv)
         t_list **stack_a_ptr = &stack_a;
         t_list **stack_b_ptr = &stack_b;
 
-        sorting_tree(&stack_a_ptr, &stack_b_ptr);
-        print_list( stack_a);
+        // sorting_tree(&stack_a_ptr, &stack_b_ptr);
+        // print_list( stack_a);
 
         // sorth_two(&stack_a_ptr , &stack_b_ptr);
         // print_list( stack_a);
         
         // sorth_four(&stack_a_ptr , &stack_b_ptr);
         // print_list( stack_a);
+
+        sorting_five(&stack_a_ptr, &stack_b_ptr);
+        print_list( stack_a);
 
         // printf("\n== After SS ==\n");
         // print_list( stack_a);

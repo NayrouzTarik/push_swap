@@ -21,7 +21,7 @@ void ft_pa(t_list **stack_a, t_list **stack_b)
     top_b->next = *stack_a; 
     top_b->prev = NULL;   
     *stack_a = top_b;
-    // printf("pa\n");
+    printf("pa\n");
 }
 
 void ft_pb(t_list **stack_a, t_list **stack_b)
@@ -45,5 +45,5 @@ void ft_pb(t_list **stack_a, t_list **stack_b)
     top_a->next = *stack_b; 
     top_a->prev = NULL;   
     *stack_b = top_a;
-    // printf("pb\n");
+    printf("pb\n");
 }

@@ -58,5 +58,9 @@ void ft_rr(t_list **stack_a, t_list **stack_b);
 void sorth_two(t_list ***stack_a , t_list ***stack_b);
 void sorting_tree(t_list ***stack_a , t_list ***stack_b);
 void sorth_four(t_list ***stack_a , t_list ***stack_b);
+void sorting_five(t_list ***stack_a, t_list ***stack_b);
+
+//helper fcts
+int find_min(t_list **stack);
 
 #endif
