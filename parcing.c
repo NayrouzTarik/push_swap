@@ -60,15 +60,19 @@ t_list *parsing(int ac, char **av)
 
     while (i < ac) 
     {
-        value = ft_atoi(av[i]);
-        if (value == 0)
+        signed_and_number(av[i]);
+        if (!is_valid_number(av[i]))
         {
             printf("Error\n");
-            exit(0);
+            return NULL;
+        }
+        if (is_valid_number(av[i]) == 1)
+        {
+            value = ft_atoi(av[i]);
         }
         if (exists_in_list(list, value))
         {
-            write(1,"Duplicates \n", STDERR_FILENO);
+            write(1,"Duplicates\n", 11);
             exit(EXIT_FAILURE);
         }
         t_list *new_node = ft_lstadd(value); 
@@ -78,7 +82,7 @@ t_list *parsing(int ac, char **av)
         ft_lstadd_last(&list, value); 
         i++;
     }
-    print_list(list);
+    // print_list(list);
     return list;
 }
 
@@ -92,6 +96,26 @@ void print_list(t_list *list)
         current = current->next;
     }
     printf("\n");
+}
+
+int ft_isdigit(int c) 
+{
+    return (c >= '0' && c <= '9');
+}
+
+
+int is_valid_number(char *str) 
+{
+    int i = 0;
+    if (str[i] == '-' || str[i] == '+')
+        i++;
+    while (str[i] != '\0') 
+    {
+        if (!ft_isdigit(str[i])) 
+            return 1; 
+        i++;
+    }
+    return 1;
 }
 
 #include "push_swap.h"
@@ -126,10 +150,13 @@ int main(int argc, char **argv)
         // print_list( stack_a);
         
         // sorth_four(&stack_a_ptr , &stack_b_ptr);
-        // print_list( stack_a);
+        // print_list(stack_a);
 
         sorting_five(&stack_a_ptr, &stack_b_ptr);
         print_list( stack_a);
+        
+        // sorth_upper_than_one_hundred(stack_a_ptr, stack_b_ptr);
+        // print_list( stack_a);
 
         // printf("\n== After SS ==\n");
         // print_list( stack_a);

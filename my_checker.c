@@ -37,7 +37,7 @@
 //     return 0;
 // }
 
-int ft_atoi(const char *str)
+size_t ft_atoi(const char *str)
 {
     int i;
     int signe;
@@ -46,7 +46,7 @@ int ft_atoi(const char *str)
     i = 0;
     signe = 1;
     res = 0;
-    while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+    while (str[i] == ' ' && str[i])
     {
         i++;
     }
@@ -80,4 +80,18 @@ int exists_in_list(t_list *list, int value)
         current = current->next;
     }
     return (0); 
+}
+
+void signed_and_number(char *str)
+{
+    int i = 0;
+    if (ft_isdigit(str[i]))
+    {
+        i++;
+        if ((str[i] == '+' || str[i] == '-') && ft_isdigit(str[i + 1]))
+        {
+            write(1, "Error\n", 6);
+            exit(EXIT_FAILURE);
+        }
+    }
 }

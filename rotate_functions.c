@@ -5,7 +5,6 @@ void ft_ra(t_list **stack_a, int print)
     if (stack_a == NULL || *stack_a == NULL || (*stack_a)->next == NULL) 
         return;
     t_list *first = *stack_a; 
-    //to keep update ela last eleement
     t_list *last = *stack_a;
     while (last->next != NULL) 
     {
@@ -25,7 +24,6 @@ void ft_rb(t_list **stack_b, int print)
     if (stack_b == NULL || *stack_b == NULL || (*stack_b)->next == NULL) 
         return;
     t_list *first = *stack_b; 
-    //to keep update ela last eleement
     t_list *last = *stack_b;
     while (last->next != NULL) 
     {

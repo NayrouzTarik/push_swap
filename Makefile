@@ -5,7 +5,17 @@ CFLAGS = -Wall -Wextra -Werror
 
 INC = push_swap.h \
 
-SRC = 
+SRC = parcing.c \
+	my_checker.c \
+	doubly_linkedlist.c \
+	push_functions.c \
+	reverserotate_functions.c \
+	rotate_functions \
+	swap_functions.c \
+	sorting_3.c \
+	sorth_2.c \
+	sorting_5.c \
+	sorth_4.c \
 
 OBJ = $(SRC:.c=.o)
 

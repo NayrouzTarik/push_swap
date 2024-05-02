@@ -38,7 +38,10 @@ void deleteNode(t_list **list, t_list *del);
 int ft_lstsize(t_list *list);
 int exists_in_list(t_list *list, int value);
 void print_list(t_list *list);
-int ft_atoi(const char *str);
+size_t ft_atoi(const char *str);
+int is_valid_number(char *str) ;
+int ft_isdigit(int c) ;
+
 //swap functions
 void ft_sa(t_list **stack_a, int should_print);
 void ft_sb(t_list **stack_b, int should_print);
@@ -59,8 +62,14 @@ void sorth_two(t_list ***stack_a , t_list ***stack_b);
 void sorting_tree(t_list ***stack_a , t_list ***stack_b);
 void sorth_four(t_list ***stack_a , t_list ***stack_b);
 void sorting_five(t_list ***stack_a, t_list ***stack_b);
+void sorth_upper_than_one_hundred(t_list **stack_a, t_list **stack_b);
 
 //helper fcts
 int find_min(t_list **stack);
+void signed_and_number(char *str);
+void merge_sort(t_list **stack_a, t_list **stack_b, int size);
+int find_max(t_list **stack);
+
+
 
 #endif
